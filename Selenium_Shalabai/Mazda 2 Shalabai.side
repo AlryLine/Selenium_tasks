@@ -1,0 +1,135 @@
+{
+  "id": "dea34620-cab0-4887-82dc-a9d9d38f2628",
+  "version": "2.0",
+  "name": "Mazda 2 Shalabai",
+  "url": "https://www.mazda.com",
+  "tests": [{
+    "id": "6c1d7512-fb28-4525-a65c-24c614b1fbef",
+    "name": "search",
+    "commands": [{
+      "id": "f83ccb3a-3e27-4f98-b4ec-bce0a496a83a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a76cf4-dcf9-4202-960f-85a63aaf2d23",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1456x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1294a3e2-5f5b-4185-8624-f813f7b922f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=header-search",
+      "targets": [
+        ["id=header-search", "id"],
+        ["name=kw", "name"],
+        ["css=#header-search", "css:finder"],
+        ["xpath=//input[@id='header-search']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "797eeec4-52bc-403c-bbd8-ea3889210db9",
+      "comment": "",
+      "command": "type",
+      "target": "id=header-search",
+      "targets": [
+        ["id=header-search", "id"],
+        ["name=kw", "name"],
+        ["css=#header-search", "css:finder"],
+        ["xpath=//input[@id='header-search']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "Mazda 2"
+    }, {
+      "id": "0077ee5f-c11f-40ce-9f9a-67386caf43d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button-search",
+      "targets": [
+        ["css=.button-search", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e49750-2bef-4d61-98f3-bf90940a4422",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.result_txt",
+      "targets": [
+        ["css=.result_txt", "css:finder"],
+        ["xpath=//section[@id='contents']/header[2]", "xpath:idRelative"],
+        ["xpath=//section/header[2]", "xpath:position"],
+        ["xpath=//header[contains(.,'Results for “Mazda 2” , 531 Results Found.')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3507b725-e5be-4477-afb4-2f314d792460",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.result_txt",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a66e5b11-4eec-429a-b49a-a52c4c77967f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.result_txt > p",
+      "targets": [
+        ["css=.result_txt > p", "css:finder"],
+        ["xpath=//div[@id='contents_2014']/div/p", "xpath:idRelative"],
+        ["xpath=//div[5]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Results for \"Mazda 2\" , 532 Results Found.')]", "xpath:innerText"]
+      ],
+      "value": "text"
+    }, {
+      "id": "28ce22a2-6ce8-4b13-a5d9-38b8e3891102",
+      "comment": "",
+      "command": "echo",
+      "target": "${text}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c73276c-38d8-4804-b3e0-7ad1a5fdb736",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.detail_cont:nth-child(1)",
+      "targets": [
+        ["css=.detail_cont:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='contents_2014']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div", "xpath:position"]
+      ],
+      "value": "result"
+    }, {
+      "id": "6e2cb04a-8d98-4bd1-bd8b-e175c3440e4a",
+      "comment": "",
+      "command": "echo",
+      "target": "${result}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01323e77-1648-496f-b762-4c6e07838b31",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "MAZDA:Search Result",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "78b590db-f0f6-4b19-a111-5cbe342dc954",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.mazda.com/"],
+  "plugins": []
+}
